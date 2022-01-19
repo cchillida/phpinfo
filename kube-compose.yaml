@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: phpinfo-po
+ spec: 
+  contaniners: 
+    -
+      args:
+        - -f src/index.php -S 0.0.0.0:8080
+      command:
+        - php -p
+      image: cchillida/redhat-php:latest
+      name: php-container
+      ports:
+        -
+          
+      volumeMounts:
+      workingDir:
+  volumes: 
